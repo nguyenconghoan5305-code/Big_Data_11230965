@@ -1,19 +1,30 @@
 """Draw the ten report panels from aggregate measurements with no model or raw-data access."""
 import json
 from pathlib import Path
+import os
 from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
-FIG = ROOT/"submission/figures"
+FIG = Path(os.environ.get("BFT_REPORT_OUTPUT", ROOT/"submission"))/"figures"
 FIG.mkdir(parents=True,exist_ok=True)
 evidence = json.loads((ROOT/"submission/aggregate_evidence.json").read_text(encoding="utf-8"))
 storage = {"summary":evidence["storage"]}
 m, folds, bounds, curves = (evidence[key] for key in ("final","folds","split","curves"))
+def report_font(size):
+    candidates = [os.environ.get("BFT_REPORT_FONT"), "C:/Windows/Fonts/arial.ttf", "DejaVuSans.ttf"]
+    for candidate in candidates:
+        if candidate:
+            try:
+                return ImageFont.truetype(candidate, size)
+            except OSError:
+                pass
+    raise RuntimeError("Set BFT_REPORT_FONT to a readable TrueType font file")
+
 NAVY, TEAL, GREY, LIGHT = "#172f43", "#237f80", "#617487", "#edf4f6"
 def canvas(height=460):
     im = Image.new("RGB", (1500, height), "white")
     d = ImageDraw.Draw(im)
     def label(x, y, value, size=34, fill=NAVY, **kw):
-        d.text((x, y), str(value), font=ImageFont.truetype("C:/Windows/Fonts/arial.ttf", size), fill=fill, **kw)
+        d.text((x, y), str(value), font=report_font(size), fill=fill, **kw)
     return im, d, label
 
 def bars(name, labels, values, unit, axis_max=None, fmt=".2f"):
@@ -84,7 +95,7 @@ for i,(key,c) in enumerate([("Training / development",TEAL),("4-quarter gap","#b
 im.save(FIG/"timeline.png")
 
 im=Image.new('RGB',(1650,520),'white');draw=ImageDraw.Draw(im)
-def txt(x,y,s,size=29,anchor=None):draw.text((x,y),s,font=ImageFont.truetype('C:/Windows/Fonts/calibri.ttf',size),fill='#183748',anchor=anchor)
+def txt(x,y,s,size=29,anchor=None):draw.text((x,y),s,font=report_font(size),fill='#183748',anchor=anchor)
 for i,(pairs,yname,xname,base,point) in enumerate([(curves['pr'],'Precision','Recall',m['prevalence'],(m['recall'],m['precision'])),(curves['roc'],'True positive rate','False positive rate',None,(m['false_positive_rate'],m['recall']))]):
  left=94+i*820
  def xy(x,y):return(left+x*640,406-y*295)

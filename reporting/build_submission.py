@@ -1,10 +1,12 @@
 """Build the editable submission from the editorial manuscript and measured figure assets."""
 from pathlib import Path
+import os
 from docx import Document
 from docx.shared import Cm
 
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/"submission"
+OUT=Path(os.environ.get("BFT_REPORT_OUTPUT", ROOT/"submission"))
+OUT.mkdir(parents=True,exist_ok=True)
 doc=Document(ROOT/"reporting/submission_manuscript.docx")
 figures=0
 for paragraph in doc.paragraphs:

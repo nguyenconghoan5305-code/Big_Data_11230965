@@ -339,3 +339,8 @@ New replay needs a fresh plan ID and all five upstream flags `--split`, `--devel
 **End-to-end clean-environment regeneration is not yet established.** The captured-vintage chain now reaches the locked development threshold. Required storage and processing benchmark replay, complete README/traceability review and final report remain open. The accepted final model/scores were only verified read-only and were never regenerated; the original final-test registry must stay intact.
 
 The final PDF/DOCX, page-count check, student's name/ID, verified public GitHub URL, citation completeness and publication remain separate Part 6 submission tasks. No final report assembly or repository publication occurred here.
+
+
+## Submission closeout 2026-11-26
+
+Report route A passed in isolated tmp/submission_closeout_20261126/isolated using a new CPython 3.11.9 venv and requirements-report.txt; pip check passed. The route used public aggregate evidence and the editable manuscript only. Word exported the PDF. Eleven rendered pages were inspected, with 10 main pages and one appendix page. All DOCX paragraphs and table cells matched PDF text after whitespace normalization. Canonical deliverables are submission/BFT65B_Final_Report.docx and .pdf. Ten figure panels and ten tables are retained. Historical benchmark medians remain separately attributed. The 20 focused and 500 full tests recorded at tmp/submission_closeout_20261125 remain the latest scientific regression result; report-only changes were validated through isolated regeneration and document checks. Publication of this local revision remains OPEN.

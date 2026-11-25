@@ -312,7 +312,7 @@ p('A Big-Data Pipeline for Bank Failure Early Warning', 'Title', justify=False)
 p('Final Individual Research Report', 'Subtitle', justify=False)
 p(
     '**Author:** Nguyen Cong Hoan (Student ID: 11230965)  ·  '
-    '**Repository:** https://github.com/nguyenconghoan5305-code/Final_Exam',
+    '**Repository:** https://github.com/nguyenconghoan5305-code/Big_Data_11230965',
     justify=False,
     space_after=6,
 )
@@ -722,7 +722,7 @@ refs = [
     '[2] Federal Deposit Insurance Corporation (FDIC). *BankFind Suite API Documentation and Financials, Failures, and Institutions YAML Dictionaries*. https://api.fdic.gov/banks/docs/ (accessed 25 November 2026).',
     '[3] Federal Deposit Insurance Corporation (FDIC). *Failures Data Dictionary (failure_properties.yaml) and Resolutions Handbook*. https://www.fdic.gov/bank-failures/resolutions-handbook.pdf.',
     '[4] scikit-learn developers. *average_precision_score (v1.6.1) Documentation*. https://scikit-learn.org/1.6/modules/generated/sklearn.metrics.average_precision_score.html.',
-    '[5] Nguyen Cong Hoan. *BFT65B Implementation, Evidence Register, and Reproducibility Documentation*. https://github.com/nguyenconghoan5305-code/Final_Exam.',
+    '[5] Nguyen Cong Hoan. *BFT65B Implementation, Evidence Register, and Reproducibility Documentation*. https://github.com/nguyenconghoan5305-code/Big_Data_11230965.',
     '[6] Course-provided `fdic_download_starter.py`. Optional acquisition reference; superseded by typed Arrow storage and manifest recovery.',
     '[7] AI Assistance Disclosure: OpenAI Codex and Antigravity (Google DeepMind) supported pipeline engineering, verification scripting, and editorial refinement; all numerical claims are verified directly against immutable saved project artifacts.'
 ]

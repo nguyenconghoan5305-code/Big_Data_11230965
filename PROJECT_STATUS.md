@@ -146,3 +146,8 @@ python -c "from pyspark.sql import SparkSession; from pathlib import Path; impor
 ```
 
 Capture the complete command output and run the full `tests/spark_runtime_acceptance.py` gates before claiming Linux compatibility. The Linux commands above are a plan and have not been executed. The README's `py -3.11` command remains unverified on this Windows host (`py -0p` previously returned no installed Pythons); use the direct Python 3.11 executable and `.venv_local` for current Windows work.
+
+
+## Submission closeout 2026-11-26
+
+Report route A passed in isolated tmp/submission_closeout_20261126/isolated using a new CPython 3.11.9 venv and requirements-report.txt; pip check passed. The route used public aggregate evidence and the editable manuscript only. Word exported the PDF. Eleven rendered pages were inspected, with 10 main pages and one appendix page. All DOCX paragraphs and table cells matched PDF text after whitespace normalization. Canonical deliverables are submission/BFT65B_Final_Report.docx and .pdf. Ten figure panels and ten tables are retained. Historical benchmark medians remain separately attributed. The 20 focused and 500 full tests recorded at tmp/submission_closeout_20261125 remain the latest scientific regression result; report-only changes were validated through isolated regeneration and document checks. Publication of this local revision remains OPEN.
