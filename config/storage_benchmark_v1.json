@@ -1,0 +1,17 @@
+{
+  "id": "task_1_6_storage_v1",
+  "accepted_attempt": "real20261111b",
+  "source_manifest": "runs/task_1_5_full_real20261111b.json",
+  "source_summary": "runs/task_1_5_full_real20261111b_summary.json",
+  "source_schema_version": "2",
+  "source_physical_extras": ["ID", "SOURCE_MISSING_FIELDS"],
+  "logical_fields": ["CERT", "REPDTE", "STNAME", "ASSET", "DEP", "EQ", "NETINC", "ROA", "NCLNLS", "LNATRES", "RBC1AAJ", "CHBAL", "SC", "BRO", "DEPDOM", "EINTEXP", "LNLSGR", "LNRE", "LNCI", "P3ASSET", "P9ASSET", "NAASSET", "NTLNLS", "ELNATR", "NIMY", "RBCRWAJ"],
+  "full": {"first_quarter": "19840331", "last_quarter": "20260630", "quarter_count": 170, "rows": 1682616},
+  "selective": {"first_quarter": "20100331", "last_quarter": "20191231", "quarter_count": 40, "fields": ["CERT", "REPDTE", "ASSET", "DEP", "EQ", "ROA", "NIMY", "RBCRWAJ"]},
+  "formats": ["csv", "snappy", "zstd"],
+  "storage_root": "data_processed/storage_benchmark_v1",
+  "evidence_root": "runs/task_1_6_storage",
+  "csv": {"encoding": "utf-8", "newline": "LF", "delimiter": ",", "quote": "minimal", "header": true, "null_sentinel": "__BFT65B_NULL__", "decimal": "exact base-10 string", "float": "Python repr binary64 round-trip", "date": "YYYY-MM-DD", "read_threads": false},
+  "parquet": {"version": "2.6", "row_group_size": 65536, "use_dictionary": false, "write_statistics": true, "data_page_version": "1.0", "data_page_size": 1048576, "write_page_index": false, "use_byte_stream_split": false, "snappy_level": null, "zstd_level": 3, "read_threads": false},
+  "benchmark": {"seed": 65, "warmups_per_combination": 1, "repetitions_per_combination": 5, "timer": "time.perf_counter_ns", "process_isolation": "one fresh worker process per read", "cache": "OS-managed; no cold-cache claim", "rotation": "cyclic format order by repetition", "gc": "collect immediately before timed read"}
+}

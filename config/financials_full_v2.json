@@ -1,0 +1,15 @@
+{
+  "financial_start": "1984-03-31",
+  "financial_end": "2026-06-30",
+  "data_root": "data_raw/task_1_5_full",
+  "run_root": "runs",
+  "fields_verified": true,
+  "financial_fields": [
+    "CERT", "REPDTE", "STNAME", "ASSET", "DEP", "EQ", "NETINC", "ROA",
+    "NCLNLS", "LNATRES", "RBC1AAJ", "CHBAL", "SC", "BRO", "DEPDOM",
+    "EINTEXP", "LNLSGR", "LNRE", "LNCI", "P3ASSET", "P9ASSET",
+    "NAASSET", "NTLNLS", "ELNATR", "NIMY", "RBCRWAJ"
+  ],
+  "failure_fields": ["CERT", "FAILDATE", "COST"],
+  "institution_fields": ["CERT", "STNAME", "ACTIVE", "CHANGEC1"]
+}

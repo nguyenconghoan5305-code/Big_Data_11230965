@@ -1,0 +1,10 @@
+{
+  "data_root": "data_raw/task_1_5a",
+  "fields_verified": true,
+  "financial_fields": [
+    "CERT", "REPDTE", "STNAME", "ASSET", "DEP", "EQ", "NETINC", "ROA",
+    "NCLNLS", "LNATRES", "RBC1AAJ", "CHBAL", "SC", "BRO", "DEPDOM",
+    "EINTEXP", "LNLSGR", "LNRE", "LNCI", "P3ASSET", "P9ASSET",
+    "NAASSET", "NTLNLS", "ELNATR", "NIMY", "RBCRWAJ"
+  ]
+}
